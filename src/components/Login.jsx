@@ -11,7 +11,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5000/api/auth/login", formData);
+      const { data } = await axios.post("https://reset-password-demo-server.onrender.com/api/auth/login", formData);
       alert("Login successful!");
       console.log(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
