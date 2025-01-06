@@ -7,7 +7,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/forgot-password", {
+      await axios.post("https://reset-password-demo-server.onrender.com/api/auth/forgot-password", {
         email,
       });
       alert("Password reset email sent!");

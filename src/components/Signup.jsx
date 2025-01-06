@@ -11,7 +11,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/signup", formData);
+      const { data } = await axios.post("https://reset-password-demo-server.onrender.com/api/auth/signup", formData);
       alert("Signup successful!");
       console.log(data);
     } catch (error) {
