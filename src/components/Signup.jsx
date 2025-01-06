@@ -11,7 +11,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://reset-password-demo-server.onrender.com/api/auth/signup", formData);
+      const { data } = await axios.post("/signup", formData);
       alert("Signup successful!");
       console.log(data);
     } catch (error) {
@@ -73,7 +73,7 @@ const Signup = () => {
                   />
                 </div>
                 <div>
-                Already have an account? <Link to={"/login"}>Login here
+                  Already have an account?  <Link to={"/login"}>Login here
                   </Link>
                 </div>
                 <button type="submit" className="btn btn-primary w-100">

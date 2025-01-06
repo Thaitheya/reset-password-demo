@@ -7,7 +7,7 @@ const ForgotPassword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://reset-password-demo-server.onrender.com/api/auth/forgot-password", {
+      await axios.post("/forgot-password", {
         email,
       });
       alert("Password reset email sent!");
@@ -19,16 +19,6 @@ const ForgotPassword = () => {
 
   return (
     <div className="container mt-5">
-      <nav aria-label="breadcrumb">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="/login">Login</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Forgot Password
-                </li>
-              </ol>
-            </nav>
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card">
